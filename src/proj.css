@@ -1,0 +1,155 @@
+* {
+	--main-color: #191a19;
+	--sec-color: #4e9f3d;
+	--tert-color: #d8e9a8;
+	font-family: 'Oswald', sans-serif;
+}
+
+.projSect {
+	color: white;
+
+	overflow-x: hidden;
+}
+
+.proj {
+	display: flex;
+	justify-content: flex-start;
+	opacity: 0;
+	margin-bottom: 6rem;
+	width: 100%;
+}
+
+.rightSide {
+	flex-direction: row-reverse;
+}
+
+.projTitle {
+	font-size: 1.3rem;
+	display: flex;
+	justify-content: center;
+}
+
+.projDesc {
+	width: 20%;
+	margin: 0 2rem 0 2rem;
+	font-size: 1.3rem;
+}
+
+.projTech {
+	width: 20%;
+}
+
+.projTech > img {
+	border-radius: 10px;
+	height: 300px;
+	width: 300px;
+}
+
+.projUl {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.projUl > li {
+	background: linear-gradient(to left, #208b02, #2b9405);
+	color: var(--main-color);
+	margin-top: 0.5rem;
+	margin-right: 1rem;
+	box-shadow: inset 2px 2px 4px -2px rgb(1, 104, 1);
+	font-size: 1.1rem;
+
+	border-radius: 12px;
+	padding: 0 1rem 0 1rem;
+}
+
+.linkBtnDiv {
+	margin-top: 2rem;
+	display: flex;
+}
+
+.linkBtn {
+	margin-right: 1rem;
+	font-size: 1.1rem;
+	padding: 0.1rem;
+	width: 5rem;
+	background: linear-gradient(
+		45deg,
+		rgba(0, 145, 118, 1) 20%,
+		rgba(0, 163, 102, 1) 40%,
+		rgba(0, 144, 71, 1) 60%,
+		rgba(2, 103, 52, 1) 80%
+	);
+	border-radius: 4px;
+	border: 1px solid black;
+}
+
+/* Mobile
+ //////////////////////////////////////////////////////*/
+@media (max-width: 62rem) {
+	.proj {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		margin-bottom: 6rem;
+		position: relative;
+		width: 100%;
+		overflow-x: hidden;
+	}
+	.projDesc {
+		width: 80%;
+
+		font-size: 1.1rem;
+	}
+
+	.projTech {
+		display: flex;
+
+		justify-content: center;
+		align-items: center;
+	}
+
+	.projTech > img {
+		border-radius: 10px;
+		height: 10rem;
+		width: 10rem;
+	}
+
+	.leftSide {
+		flex-direction: column-reverse;
+		left: -30%;
+	}
+
+	.rightSide {
+		flex-direction: column-reverse;
+		left: 30%;
+	}
+
+	.projUl {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.projUl > li {
+		background-color: var(--sec-color);
+		color: var(--main-color);
+		margin-right: 1rem;
+
+		border-radius: 12px;
+	}
+}
+
+/* Tablet
+ //////////////////////////////////////////////////////*/
+@media (max-width: 62rem) {
+	.projTech > img {
+		border-radius: 10px;
+		height: 250px;
+		width: 250px;
+	}
+}

@@ -1,13 +1,227 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	--main-color: #191a19;
+	--sec-color: #4e9f3d;
+	--tert-color: #d8e9a8;
+	font-family: 'Oswald', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+
+	box-sizing: border-box;
+
+	background: linear-gradient(
+		135deg,
+		#000000,
+		var(--main-color)
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.maincont {
+	display: flex;
+	flex-direction: column;
+	overflow-x: hidden;
+}
+
+a {
+	color: var(--main-color);
+	text-decoration: none;
+}
+
+.head {
+	flex-wrap: nowrap;
+	color: white;
+	width: 100%;
+	margin: 0 auto;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	height: 50vh;
+}
+
+.introH1 {
+	font-size: 4rem;
+}
+
+.introH2 {
+	font-size: 2rem;
+
+	font-weight: 400;
+}
+
+.headAlign {
+	display: flex;
+}
+
+.navmain {
+	display: flex;
+	flex-direction: column;
+	padding-top: 2rem;
+}
+
+.sidebar {
+	width: 25%;
+	position: sticky;
+	top: 25vh;
+	height: 0;
+	left: 5%;
+	z-index: 2;
+}
+
+.navbutton {
+	width: 9rem;
+	height: 2.5rem;
+	margin: 0.5rem;
+	border-radius: 6px;
+	color: var(--main-color);
+	background: #000000; /* fallback for old browsers */
+
+	background: linear-gradient(
+		45deg,
+		#4e9f3d,
+		#046109
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	border: 1px solid var(--sec-color);
+	font-weight: 400;
+	font-size: 1.3rem;
+	box-shadow: inset 5px 5px 10px -3px #167703;
+	cursor: pointer;
+}
+
+.brandLinks {
+	color: white;
+	width: 33%;
+	justify-content: space-evenly;
+	margin-top: 1rem;
+	display: flex;
+}
+
+.brandLinks > * {
+	font-size: 1.5rem;
+}
+
+.aboutme {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 70%;
+	margin: 0 auto;
+	height: 30vh;
+}
+
+.aboutmehead {
+	color: white;
+	font-size: 1.7rem;
+}
+
+.aboutmepar {
+	width: 60%;
+	justify-content: flex-end;
+	display: flex;
+	margin: 0 auto;
+	text-align: left;
+	align-items: center;
+	flex-wrap: nowrap;
+	color: white;
+	font-size: 1.3rem;
+}
+
+.techDiv {
+	display: flex;
+
+	width: 60%;
+	color: white;
+	justify-content: center;
+	gap: 3rem;
+	font-size: 1.1rem;
+
+	align-items: center;
+}
+
+.techDiv > ul {
+	list-style: none;
+}
+
+.techDiv > ul > li {
+	margin-right: 0.5rem;
+}
+
+/*
+Tablets 
+////////////////////////////////////////////////////////////////////////////*/
+@media (max-width: 62rem) {
+	.navmain {
+		display: none;
+	}
+
+	.aboutme {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: 100%;
+		margin: 0 auto;
+		height: 30vh;
+	}
+
+	.techDiv {
+		display: flex;
+
+		width: 70%;
+		color: white;
+		justify-content: center;
+		gap: 3rem;
+		font-size: 1.1rem;
+
+		align-items: center;
+	}
+}
+
+/*
+Mobile 
+////////////////////////////////////////////////////////////*/
+
+@media (max-width: 43rem) {
+	.navmain {
+		display: none;
+	}
+	.head {
+		flex-wrap: nowrap;
+		color: white;
+		width: 70%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		height: 85vh;
+	}
+
+	.aboutme {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		word-wrap: break-word;
+		width: 100%;
+		margin: 0 auto;
+		height: 30vh;
+	}
+
+	.techDiv {
+		display: flex;
+
+		width: 100%;
+		color: white;
+		justify-content: center;
+		gap: 3rem;
+		font-size: 1.1rem;
+
+		align-items: center;
+	}
 }
