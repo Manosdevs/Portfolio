@@ -3,6 +3,7 @@ import Project from './Project'
 import db from '../db.json'
 
 const ProjList = forwardRef((props, ref) => {
+	//render project items
 	const projects = db.map((elem) => {
 		console.log(elem.techs)
 		return (

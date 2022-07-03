@@ -11,10 +11,12 @@ function Navbar({ home, project, aboutme, contact }) {
 
 	gsap.registerPlugin(ScrollTrigger)
 
+	//scroll to element
 	const handleClick = (elem) => {
 		elem.current.scrollIntoView({ behavior: 'smooth' })
 	}
 
+	//animation
 	useEffect(() => {
 		gsap.from(testRef.current, { autoAlpha: 0, x: -25 })
 		const animation2 = gsap.to(testRef.current, {
@@ -39,31 +41,31 @@ function Navbar({ home, project, aboutme, contact }) {
 			<button className='navbutton' onClick={() => handleClick(home)}>
 				Home
 			</button>
-			<button className='navbutton' onClick={() => handleClick(aboutme)}>
-				About Me
-			</button>
 			<button className='navbutton' onClick={() => handleClick(project)}>
 				Projects
 			</button>
+			<button className='navbutton' onClick={() => handleClick(aboutme)}>
+				About Me
+			</button>
+
 			<button className='navbutton' onClick={() => handleClick(contact)}>
 				Contact{' '}
 			</button>
 			<div className='brandLinks'>
-				<FontAwesomeIcon icon={faLinkedin}>
-					<a
-						rel='noreferrer'
-						href='https://github.com/Manosdevs/'
-						target='_blank'
-					></a>
-				</FontAwesomeIcon>
-
-				<FontAwesomeIcon icon={faGithub}>
-					<a
-						rel='noreferrer'
-						href='https://www.linkedin.com/in/emmanouil-arvanitis-656a1722a/'
-						target='_blank'
-					></a>
-				</FontAwesomeIcon>
+				<a
+					rel='noreferrer'
+					href='https://www.linkedin.com/in/emmanouil-arvanitis-656a1722a/'
+					target='_blank'
+				>
+					<FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+				</a>
+				<a
+					rel='noreferrer'
+					href='https://github.com/Manosdevs/'
+					target='_blank'
+				>
+					<FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+				</a>
 			</div>
 		</nav>
 	)

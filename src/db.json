@@ -3,9 +3,9 @@
 		"id": 0,
 		"title": "Online Supermarket",
 
-		"description": "An end to end supermarket website, with routing and a cart. Initially made this right after the trivia project, updated it recently.",
+		"description": "A supermarket website, with routing and an advanced cart. Recently remade to be more responsive and reflect better code practices.",
 		"techs": ["HTML", "CSS", "ReactJS"],
-		"image": "pepega.jpeg",
+		"image": "shopIpad.png",
 		"demo": "https://manosdevs.github.io/ShoppingCart/",
 		"code": "https://github.com/Manosdevs/ShoppingCart"
 	},
@@ -14,7 +14,7 @@
 		"id": 1,
 		"title": " Blog",
 
-		"description": "My first full-stack project, using the MERN stack. A very simple, barebones blog. At this point I realized I knew very little about databases, APIs and routing, so this was a way to familiarize myself. Creating a post requires authorization, demo credentials are email: admin123@gmail.com pass: admin123.",
+		"description": "My first full-stack project, using the MERN stack. A simple blog. At this point I realized I knew very little about databases, APIs and routing, so this was a way to familiarize myself. Creating a post requires authorization, demo credentials are in the github repo linked below.",
 
 		"techs": [
 			"HTML",
@@ -25,7 +25,7 @@
 			"Express",
 			"MongoDB"
 		],
-		"image": "pepega.jpeg",
+		"image": "blogIpad.png",
 		"demo": "https://blogappmanos.herokuapp.com/",
 		"code": "https://github.com/Manosdevs/Blog"
 	},
@@ -34,10 +34,10 @@
 		"id": 2,
 		"title": "Trivia",
 
-		"description": "My first React project, a simple Trivia using the open trivia database API, updated recently to make it responsive.",
+		"description": "My first React project, a Trivia single page app using the Open Trivia Database.",
 
 		"techs": ["HTML", "CSS", "ReactJS"],
-		"image": "pepega.jpeg",
+		"image": "triviaIpad.png",
 		"demo": "https://manosdevs.github.io/Trivia/",
 		"code": "https://github.com/Manosdevs/Trivia"
 	}

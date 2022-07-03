@@ -1,10 +1,11 @@
-import pepega from '../images/pepega.jpeg'
-import React, { useEffect, useRef, forwardRef } from 'react'
+import React, { useState, useEffect, useRef, forwardRef } from 'react'
 import { gsap } from 'gsap'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const Aboutme = forwardRef((props, ref) => {
+	const [hidePar, setHidePar] = useState(false)
+	//animation
 	gsap.registerPlugin(ScrollTrigger)
 
 	useEffect(() => {
@@ -28,23 +29,59 @@ const Aboutme = forwardRef((props, ref) => {
 	return (
 		<article className='aboutme' ref={ref}>
 			<h3 className='aboutmehead'> About me</h3>{' '}
-			<div>
+			<div className='aboutmeDiv'>
 				<p className='aboutmepar'>
-					I'm a (senior) Product Management student that stumbled across web
-					development, and decided to pursue it. A few of the technologies I've
-					recently used are:{' '}
+					I'm a Product Management student that likes to code.
+					<button
+						onClick={() => setHidePar(true)}
+						className={!hidePar ? 'readMore' : ' hide'}
+					>
+						Read more.
+					</button>
+					<br></br>
 				</p>
+
+				<p className={hidePar ? 'aboutmepar' : 'hide'}>
+					In early 2022, I was accepted into my University's internship program.
+					Sadly, I was not elligible to participate in one, due to being legally
+					involved with out family business. Suddenly, I found myself with more
+					time on my hands, as I was almost done with the University curriculum.{' '}
+					<br></br>
+					<br></br>I started learning how to code following the interest I
+					already had and the urge of some friends who are already in the
+					industtry. Soon enough, I knew that this was what I wanted to do for
+					my career. <br></br>
+					<br></br>I already had some knowledge about the subject, thanks my
+					High School Computer Science professors who were excellent, and the
+					classes about algorithms and Computer Science in my University
+					curriculum. Between that knowledge, the very long hours I put in and
+					the occasional help from my friends, I learned rather fast. I am now
+					seeking an internship role where I can work alongside and learn from
+					other developers.{' '}
+					<button
+						onClick={() => setHidePar(false)}
+						className={hidePar ? 'readMore' : 'hide'}
+					>
+						Hide
+					</button>
+					<br></br>
+				</p>
+
 				<div className='techDiv'>
-					<ul>
-						<li>&gt; &nbsp;HTML</li>
-						<li>&gt; &nbsp;CSS</li>
-						<li>&gt; &nbsp;Javascript</li>
-					</ul>
-					<ul>
-						<li>&gt; &nbsp;ReactJS</li>
-						<li>&gt; &nbsp;MongoDB</li>
-						<li>&gt; &nbsp;NodeJS / Express</li>
-					</ul>
+					Below is a list of the technologies I've used and I'm comfortable
+					with. I'm always open to learning new frameworks or languages.
+					<div className='techLists'>
+						<ul>
+							<li>&gt; &nbsp;HTML</li>
+							<li>&gt; &nbsp;CSS</li>
+							<li>&gt; &nbsp;Javascript</li>
+						</ul>
+						<ul>
+							<li>&gt; &nbsp;ReactJS</li>
+							<li>&gt; &nbsp;MongoDB</li>
+							<li>&gt; &nbsp;NodeJS / Express</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</article>

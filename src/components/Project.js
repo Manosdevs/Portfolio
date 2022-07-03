@@ -1,17 +1,18 @@
 import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import pepega from '../images/pepega.jpeg'
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 function Project({ title, desc, idx, techs, image, demo, codeLink }) {
 	gsap.registerPlugin(ScrollTrigger)
 
+	//variables for alternating side animations
 	let elClass = `proj leftSide trigger${idx}`
-	let animClass = '30vw'
+	let animClass = '30%'
 
 	if (idx % 2 !== 0) {
 		elClass = `proj rightSide trigger${idx}`
-		animClass = '-30vw'
+		animClass = '-30%'
 		console.log(idx % 2)
 	}
 
@@ -58,7 +59,7 @@ function Project({ title, desc, idx, techs, image, demo, codeLink }) {
 				</div>
 			</div>
 			<div className='projTech'>
-				<img src={pepega} alt='appimg'></img>
+				<img src={`/images/${image}`} alt='appimg'></img>
 				<ul className='projUl'>{techItems}</ul>
 			</div>
 		</article>

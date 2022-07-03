@@ -22,7 +22,7 @@ body {
 .maincont {
 	display: flex;
 	flex-direction: column;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 a {
@@ -40,7 +40,7 @@ a {
 	align-items: center;
 	flex-direction: column;
 	justify-content: center;
-	height: 50vh;
+	height: 50%;
 }
 
 .introH1 {
@@ -64,9 +64,9 @@ a {
 }
 
 .sidebar {
-	width: 25%;
+	width: 30%;
 	position: sticky;
-	top: 25vh;
+	top: 25%;
 	height: 0;
 	left: 5%;
 	z-index: 2;
@@ -76,7 +76,7 @@ a {
 	width: 9rem;
 	height: 2.5rem;
 	margin: 0.5rem;
-	border-radius: 6px;
+	border-radius: 4px;
 	color: var(--main-color);
 	background: #000000; /* fallback for old browsers */
 
@@ -93,16 +93,27 @@ a {
 	cursor: pointer;
 }
 
+.navbutton:hover {
+	box-shadow: 5px 5px 10px -3px #167703;
+}
+
 .brandLinks {
 	color: white;
-	width: 33%;
+	width: 9rem;
+	margin: 0.5rem;
 	justify-content: space-evenly;
-	margin-top: 1rem;
+
 	display: flex;
+}
+
+.brandLinksHead {
+	display: none;
 }
 
 .brandLinks > * {
 	font-size: 1.5rem;
+	z-index: 9;
+	color: white;
 }
 
 .aboutme {
@@ -112,7 +123,8 @@ a {
 	flex-direction: column;
 	width: 70%;
 	margin: 0 auto;
-	height: 30vh;
+	height: 30%;
+	padding-top: 4rem;
 }
 
 .aboutmehead {
@@ -120,46 +132,124 @@ a {
 	font-size: 1.7rem;
 }
 
-.aboutmepar {
-	width: 60%;
-	justify-content: flex-end;
+.aboutmeDiv {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.aboutmepar {
+	width: 70%;
+
 	margin: 0 auto;
 	text-align: left;
-	align-items: center;
+
 	flex-wrap: nowrap;
 	color: white;
 	font-size: 1.3rem;
 }
 
+.readMore {
+	width: 7rem;
+	background: none;
+	height: 2rem;
+	text-align: left;
+	color: white;
+	border: none;
+	font-size: 1.3rem;
+	font-weight: 500;
+	text-decoration: underline;
+
+	cursor: pointer;
+}
+
+.hide {
+	display: none;
+}
+
 .techDiv {
 	display: flex;
-
-	width: 60%;
+	flex-direction: column;
 	color: white;
-	justify-content: center;
-	gap: 3rem;
-	font-size: 1.1rem;
-
-	align-items: center;
+	font-size: 1.3rem;
+	width: 70%;
+	padding: 1rem 0 1rem 0;
 }
 
-.techDiv > ul {
+.techLists {
+	display: flex;
+
+	width: 70%;
+	gap: 2rem;
+	font-size: 1.3rem;
+	text-align: left;
+}
+
+.techLists > ul {
 	list-style: none;
+	padding-left: 0;
 }
 
-.techDiv > ul > li {
-	margin-right: 0.5rem;
+.techLists > ul > li {
+	margin-right: 1rem;
 }
 
 /*
 Tablets 
 ////////////////////////////////////////////////////////////////////////////*/
-@media (max-width: 62rem) {
-	.navmain {
+@media (max-width: 83rem) {
+	/* .navmain {
+		display: none;
+	} */
+
+	.app {
+		flex-direction: column;
+	}
+
+	.brandLinks {
 		display: none;
 	}
 
+	.brandLinksHead {
+		color: white;
+		width: 33%;
+		justify-content: space-evenly;
+		margin-top: 1rem;
+		display: flex;
+		gap: 2rem;
+	}
+
+	.brandLinksHead > * {
+		font-size: 3rem;
+		z-index: 9;
+		color: white;
+	}
+
+	.navmain {
+		flex-direction: row;
+		padding: 1rem 0 1rem 0;
+		justify-content: center;
+	}
+
+	.sidebar {
+		top: 0;
+		width: 100%;
+
+		height: 35%;
+		z-index: 1;
+		background: linear-gradient(135deg, #000000, var(--main-color));
+	}
+
+	.navbutton {
+		width: 6rem;
+		height: 2rem;
+		font-size: 1.1rem;
+	}
+
+	.brandLinks {
+		display: none;
+	}
 	.aboutme {
 		display: flex;
 		justify-content: center;
@@ -167,19 +257,12 @@ Tablets
 
 		width: 100%;
 		margin: 0 auto;
-		height: 30vh;
+		height: 30%;
+		padding-top: 6rem;
+		padding-bottom: 3rem;
 	}
-
-	.techDiv {
-		display: flex;
-
-		width: 70%;
-		color: white;
-		justify-content: center;
-		gap: 3rem;
-		font-size: 1.1rem;
-
-		align-items: center;
+	.techLists > ul {
+		width: 50%;
 	}
 }
 
@@ -199,7 +282,7 @@ Mobile
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
-		height: 85vh;
+		height: 85%;
 	}
 
 	.aboutme {
@@ -208,9 +291,13 @@ Mobile
 		align-items: center;
 
 		word-wrap: break-word;
-		width: 100%;
+		width: 70%;
 		margin: 0 auto;
-		height: 30vh;
+		height: 30%;
+	}
+
+	.aboutmepar {
+		width: 95%;
 	}
 
 	.techDiv {
@@ -223,5 +310,9 @@ Mobile
 		font-size: 1.1rem;
 
 		align-items: center;
+		margin-left: 1rem;
+	}
+	.techLists > ul > li {
+		width: 110%;
 	}
 }

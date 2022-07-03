@@ -29,9 +29,9 @@ function App() {
 			</aside>
 			<div className='maincont'>
 				<Header ref={homeRef} />
-				<Aboutme ref={aboutmeRef} />
 
 				<ProjList ref={projRef} />
+				<Aboutme ref={aboutmeRef} />
 
 				<Contact ref={contactsRef} />
 			</div>

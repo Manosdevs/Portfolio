@@ -36,6 +36,7 @@ const Contact = forwardRef((props, ref) => {
 
 	const { name, email, message } = formData
 
+	//form change
 	const handleChange = (e) => {
 		setFormData((prevState) => ({
 			...prevState,
@@ -43,6 +44,7 @@ const Contact = forwardRef((props, ref) => {
 		}))
 	}
 
+	//reset fields after sending
 	const handleConf = () => {
 		setFormData({
 			name: '',
@@ -52,6 +54,7 @@ const Contact = forwardRef((props, ref) => {
 		setVisClass('confmsg invis')
 	}
 
+	//submit with emailjs
 	const submit = (e) => {
 		if (name && email && message) {
 			const serviceId = 'service_mqhcbyd'

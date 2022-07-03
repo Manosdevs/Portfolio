@@ -1,5 +1,8 @@
 import React, { forwardRef, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -30,8 +33,24 @@ const Header = forwardRef((props, ref) => {
 				<h1 className='introH1'>Emmanouil Arvanitis</h1>
 			</div>
 			<h2 className='introH2'>
-				Product Management student and Frontend Developer
+				Frontend Developer and Product Management student
 			</h2>
+			<div className='brandLinksHead'>
+				<a
+					rel='noreferrer'
+					href='https://www.linkedin.com/in/emmanouil-arvanitis-656a1722a/'
+					target='_blank'
+				>
+					<FontAwesomeIcon icon={faLinkedin}></FontAwesomeIcon>
+				</a>
+				<a
+					rel='noreferrer'
+					href='https://github.com/Manosdevs/'
+					target='_blank'
+				>
+					<FontAwesomeIcon icon={faGithub}></FontAwesomeIcon>
+				</a>
+			</div>
 		</header>
 	)
 })

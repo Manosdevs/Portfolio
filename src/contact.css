@@ -3,8 +3,8 @@
 	justify-content: space-around;
 	align-items: center;
 	flex-direction: column;
-	height: 50vh;
-	animation-name: fade-in;
+	height: 50%;
+
 	animation-duration: 1s;
 }
 
@@ -19,6 +19,7 @@
 	line-height: 1.5rem;
 	padding-left: 0.5rem;
 	box-shadow: 2px 3px 7px 2px #0e5001;
+	margin: 0 0 1rem 0;
 }
 
 .formSmall:focus,
@@ -42,7 +43,7 @@
 }
 
 .subBtn {
-	margin: 0 0 1rem 0;
+	margin: 1rem 0 1rem 0;
 	border-radius: 8px;
 	width: 10rem;
 	height: 2rem;
@@ -80,10 +81,10 @@
 
 @media (max-width: 43rem) {
 	.formSmall {
-		width: 80vw;
+		width: 80%;
 	}
 
 	.formMessage {
-		width: 80vw;
+		width: 80%;
 	}
 }
