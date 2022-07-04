@@ -73,10 +73,15 @@
 	display: flex;
 }
 
+.codeLink {
+	z-index: 10;
+}
+
 .linkBtn {
 	margin-right: 1rem;
 	font-size: 1.1rem;
-	padding: 0.1rem;
+	text-align: center;
+
 	width: 5rem;
 	background: linear-gradient(
 		45deg,

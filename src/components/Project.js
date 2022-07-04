@@ -45,17 +45,19 @@ function Project({ title, desc, idx, techs, image, demo, codeLink }) {
 				<h3 className='projTitle'>{title}</h3>
 				{desc}
 				<div className='linkBtnDiv'>
-					<button className='linkBtn'>
-						<a rel='noreferrer' href={demo} target='_blank'>
-							{' '}
-							Demo
-						</a>
-					</button>
-					<button className='linkBtn'>
-						<a rel='noreferrer' href={codeLink} target='_blank'>
-							&lt;/&gt; Code
-						</a>
-					</button>
+					<a className='linkBtn' rel='noreferrer' href={demo} target='_blank'>
+						{' '}
+						Demo
+					</a>
+
+					<a
+						className='linkBtn'
+						rel='noreferrer'
+						href={codeLink}
+						target='_blank'
+					>
+						&lt;/&gt; Code
+					</a>
 				</div>
 			</div>
 			<div className='projTech'>

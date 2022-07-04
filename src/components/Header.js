@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useRef } from 'react'
+import React, { forwardRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -27,6 +27,7 @@ const Header = forwardRef((props, ref) => {
 		return () => {
 			animation2.scrollTrigger.kill()
 		}
+		// eslint-disable-next-line
 	}, [])
 	return (
 		<header className='head anim' ref={ref}>
