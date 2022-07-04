@@ -43,15 +43,15 @@ const Aboutme = forwardRef((props, ref) => {
 
 				<p className={hidePar ? 'aboutmepar' : 'hide'}>
 					In early 2022, I was accepted into my University's internship program.
-					Sadly, I was not elligible to participate in one, due to being legally
-					involved with out family business. Suddenly, I found myself with more
-					time on my hands, as I was almost done with the University curriculum.{' '}
+					Sadly, I was not eligible to participate in one, due to being involved
+					with our family business. Suddenly, I found myself with more time on
+					my hands, as I was almost done with the University curriculum.{' '}
 					<br></br>
-					<br></br>I started learning how to code following the interest I
-					already had and the urge of some friends who are already in the
-					industtry. Soon enough, I knew that this was what I wanted to do for
+					<br></br>After being encouraged by some friends who are already in the
+					industry, and following the interest I already had, I started learning
+					how to code. Soon enough, I knew that this was what I wanted to do for
 					my career. <br></br>
-					<br></br>I already had some knowledge about the subject, thanks my
+					<br></br>I already had some knowledge about the subject, thanks to my
 					High School Computer Science professors who were excellent, and the
 					classes about algorithms and Computer Science in my University
 					curriculum. Between that knowledge, the very long hours I put in and

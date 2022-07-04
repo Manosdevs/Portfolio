@@ -53,6 +53,7 @@
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: left;
 }
 
 .projUl > li {
