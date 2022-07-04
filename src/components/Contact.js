@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, forwardRef } from 'react'
+import React, { useState, useEffect, forwardRef } from 'react'
 import emailjs from 'emailjs-com'
 import { gsap } from 'gsap'
 
@@ -32,6 +32,7 @@ const Contact = forwardRef((props, ref) => {
 		return () => {
 			animation2.scrollTrigger.kill()
 		}
+		// eslint-disable-next-line
 	}, [])
 
 	const { name, email, message } = formData
