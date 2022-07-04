@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, forwardRef } from 'react'
+import React, { useRef } from 'react'
 import { gsap } from 'gsap'
-import db from './db.json'
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import Navbar from './components/Navbar'

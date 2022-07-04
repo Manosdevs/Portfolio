@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import { gsap } from 'gsap'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -13,7 +13,6 @@ function Project({ title, desc, idx, techs, image, demo, codeLink }) {
 	if (idx % 2 !== 0) {
 		elClass = `proj rightSide trigger${idx}`
 		animClass = '-30%'
-		console.log(idx % 2)
 	}
 
 	const techItems = techs.map((elem) => {
@@ -38,6 +37,7 @@ function Project({ title, desc, idx, techs, image, demo, codeLink }) {
 		return () => {
 			animation2.scrollTrigger.kill()
 		}
+		// eslint-disable-next-line
 	}, [])
 	return (
 		<article className={elClass}>

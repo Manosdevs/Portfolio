@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, forwardRef } from 'react'
+import React, { useState, useEffect, forwardRef } from 'react'
 import { gsap } from 'gsap'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -25,6 +25,7 @@ const Aboutme = forwardRef((props, ref) => {
 		return () => {
 			animation2.scrollTrigger.kill()
 		}
+		// eslint-disable-next-line
 	}, [])
 	return (
 		<article className='aboutme' ref={ref}>

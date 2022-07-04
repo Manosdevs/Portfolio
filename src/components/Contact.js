@@ -68,10 +68,7 @@ const Contact = forwardRef((props, ref) => {
 
 			e.preventDefault()
 
-			emailjs
-				.send(serviceId, templateId, templateParams, userId)
-				.then((response) => console.log(response))
-				.then((error) => console.log(error))
+			emailjs.send(serviceId, templateId, templateParams, userId)
 
 			setVisClass('confmsg vis')
 
