@@ -3,6 +3,7 @@ import { gsap } from 'gsap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -36,6 +37,13 @@ const Header = forwardRef((props, ref) => {
 				Frontend Developer and Product Management student
 			</h2>
 			<div className='brandLinksHead'>
+				<a
+					rel='noreferrer'
+					href='mailto:emmanouil.arva@gmail.com'
+					target='_blank'
+				>
+					<FontAwesomeIcon icon={faEnvelope} />
+				</a>
 				<a
 					rel='noreferrer'
 					href='https://www.linkedin.com/in/emmanouil-arvanitis-656a1722a/'

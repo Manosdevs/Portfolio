@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 function Navbar({ home, project, aboutme, contact }) {
 	const testRef = useRef()
@@ -47,11 +48,19 @@ function Navbar({ home, project, aboutme, contact }) {
 			<button className='navbutton' onClick={() => handleClick(aboutme)}>
 				About Me
 			</button>
-
 			<button className='navbutton' onClick={() => handleClick(contact)}>
 				Contact{' '}
 			</button>
+
 			<div className='brandLinks'>
+				<a
+					rel='noreferrer'
+					href='mailto:emmanouil.arva@gmail.com'
+					target='_blank'
+				>
+					<FontAwesomeIcon icon={faEnvelope} />
+				</a>
+
 				<a
 					rel='noreferrer'
 					href='https://www.linkedin.com/in/emmanouil-arvanitis-656a1722a/'
