@@ -1,70 +1,11 @@
-# Getting Started with Create React App
+Stack: <ul><li>HTML</li><li>CSS</li><li>React</li><li>gsap for animations</li></ul>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Similar to any aspiring developer looking for employment, I had to make a portfolio. Issue was, I am absolutely not a designer, all the artistic talent running in our family went to my sister. Therefore, I had to spend many many hours looking at designs and other portfolios to come up with my own.  I settled for a rather simple, single static page with animations. 
 
-## Available Scripts
+Then I had to figure out how to create animations. These could have been done with some css, but I figured I'd try gsap since it was highly recommended. The basics came rather easy, their tutorials and documentation were very concise. But of course I did have to complicated it a little bit, since I wanted the project elements to alternate fade-in sides. Also, the project elements were automatically rendered into a component from a database, so there was no hard-coding the animations. So I created a function that made the animation behave differently depending on the id of the project. Took a little while to iron out the bugs with custom functions, React refs and how all those interacted with gsap and its animation triggers, but in the end all was working well.
 
-In the project directory, you can run:
+After that I created the contact section, a very simple one with emailJS. Nothing much to say there, just a form.
 
-### `npm start`
+The navbar was the trickiest part, since I REALLY wanted to make it a sticky sidebar. And a sticky sidebar overlapped with the animations at times, since they fade in from the side. Mostly CSS work, figured it out in the end. The real problem turned out to be the ScrollIntoView buttons. Normally this is done with a useRef hook, however the navbar was a lower level component than some of the elements. In hindsight, I could have probably moved it into another App.js level component, which would of course ruin the CSS but would have still probably been easier than what I did. So instead, I spent some time googling and learned how to use forwardRef, which took the ref of the elements I wanted to scroll to, passed them into App.js and then App.js passed them as props to the Navbar component. This allowed seamless scrolling to all elements, so I was very happy with how it turned out. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+And that's mostly about it, a lot of CSS work and Responsive Design. Then I bought a domain, learned how to set up the DNS for my hosting site and that was that. 
